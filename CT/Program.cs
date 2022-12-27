@@ -181,15 +181,19 @@ namespace CT
 
                 int count = 0;
                 char[] tmpArray = a.ToCharArray();
+                char tmpLastChar = '0';
                 char tmpChar = '0';
                 while (true)
                 {
-                    count++;
-                    for (int i = 0; i < tmpArray.Length-1; i++)
+                    for (int i = 0; i < tmpArray.Length; i++)
                     {
-                        tmpChar = tmpArray[i];
-                        tmpArray[i] = tmpArray[i + 1];
-                        tmpArray[i + 1] = tmpChar;
+                        tmpLastChar = tmpArray.Last();
+                        for (int j = 0; j < tmpArray.Length; j++)
+                        {
+                            tmpChar = tmpArray[j];
+                            
+                        }
+                        
                     }
 
                     if (new string(tmpArray).Equals(b))
